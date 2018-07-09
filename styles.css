@@ -1,0 +1,35 @@
+body {
+  background-color: papayawhip;
+  color: maroon;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  padding: 0 2rem;
+}
+
+form {
+  margin-left: 3rem;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+input[type="text"], label {
+  display: block;
+}
+
+button {
+  margin-left: 3rem;
+}
+
+h3 {
+  padding-top: 1;
+  margin-top: 3rem;
+  border-top: solid 1px maron;
+}
+
+button, input[type="submit"] {
+  background-color: gold;
+  color: maroon;
+  padding: 0.5rem;
+  border: none;
+}
