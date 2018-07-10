@@ -59,6 +59,10 @@ function clearGPA(){
 
 // Clears content in form fields.
 function clearFormFields(){
+  // let fields = document.querySelectorAll("input[type=text]");
+  // for(let i = 0; i < fields.length; i++){
+	//   fields[i].value = "";
+    document.getElementById("add-course").reset();
   // TODO: implement this function.
 }
 
@@ -72,7 +76,7 @@ function clearData(){
 // Prints courseList objects to the page in a readable way.
 function outputList(){
   var list = document.getElementById("course-list");
-  list.innerHTML = "";
+   list.innerHTML = "";
   for(let i=0; i<courseList.length;i++){
   let item = document.createElement('li');
   item.innerHTML = courseList[i].name + " " + courseList[i].grade;
