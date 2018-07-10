@@ -19,6 +19,7 @@ function addACourse(){
   //do not submit to server
   event.preventDefault();
   var grade = parseFloat(this.elements["grade"].value);
+  
   /*
     TODO: validate that "grade" value is a number between 1.0 and 4.0, stop processing if it is not.
 
@@ -60,7 +61,10 @@ function clearGPA(){
 
 // Clears content in form fields.
 function clearFormFields(){
-  // TODO: implement this function.
+  let inputs = document.querySelectorAll("input[type=text]");
+  for(let i = 0; i < inputs.length; i++){
+	  inputs[i].value = "";
+  }
 }
 
 // Clear out list of courses and all content shown on the page
@@ -71,14 +75,14 @@ function clearData(){
 }
 
 // Prints courseList objects to the page in a readable way.
+/*
+  Below we clear the existing contents of the "list" element. Then, for each object in courseList,
+  create an li element that holds the course's name and grade, and append
+  it to the "list" ul element.
+*/
 function outputList(){
   var list = document.getElementById("course-list");
   
-  /*
-    Below we clear the existing contents of the "list" element. Then, for each object in courseList,
-    create an li element that holds the course's name and grade, and append
-    it to the "list" ul element.
-  */
   list.innerHTML = "";
   for (let i = 0; i < courseList.length; i++){    
     let item = document.createElement('li');
