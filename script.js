@@ -59,7 +59,10 @@ function clearGPA(){
 
 // Clears content in form fields.
 function clearFormFields(){
-  // TODO: implement this function.
+  let fields = document.querySelectorAll("input[type=text]");
+  for(let i = 0; i < fields.length; i++){
+	  fields[i].value = "";
+  }
 }
 
 // Clear out list of courses and all content shown on the page
